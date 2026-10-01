@@ -18,7 +18,8 @@
     "format:check": "prettier --check .",
     "cf:typegen": "pnpm --filter @typenow/app cf:typegen",
     "deploy": "pnpm --filter @typenow/app deploy",
-    "deploy:dry-run": "pnpm --filter @typenow/app deploy:dry-run"
+    "deploy:dry-run": "pnpm --filter @typenow/app deploy:dry-run",
+    "brand:svg": "node scripts/export-brand.mjs"
   },
   "devDependencies": {
     "prettier": "^3.9.9"
