@@ -11,7 +11,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Typenow — A little less inbox. A lot more building.' },
+      { title: 'Typenow | A little less inbox. A lot more building.' },
       {
         name: 'description',
         content:
@@ -20,7 +20,7 @@ export const Route = createRootRoute({
       { name: 'theme-color', content: '#fafbf7' },
       {
         property: 'og:title',
-        content: 'Typenow — Your customers, a little closer.',
+        content: 'Typenow | Your customers, a little closer.',
       },
       {
         property: 'og:description',
