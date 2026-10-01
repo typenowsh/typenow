@@ -8,7 +8,7 @@ Assets:
 - `apps/web/public/brand/avatar-{citron,cream,charcoal,transparent}.{svg,png}`: 1024 × 1024 avatar exports with padding for square and circular crops.
 - `apps/web/public/brand.svg`: static symbol and outlined Inter wordmark.
 - `apps/web/public/wordmark.svg`: outlined Inter wordmark.
-- `apps/web/public/favicon.svg`: standalone symbol.
+- `apps/web/public/favicon.svg`: charcoal symbol on a rounded citron background, visible in both light and dark browser themes.
 - `apps/web/public/social-card.html`: source for the 1200 × 630 social image.
 - `apps/web/src/components/brand-logo.tsx`: inline symbol for interaction, with a static wordmark.
 
