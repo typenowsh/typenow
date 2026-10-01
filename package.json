@@ -1,0 +1,26 @@
+{
+  "name": "typenow",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "packageManager": "pnpm@11.0.6",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @typenow/app dev",
+    "build": "pnpm --filter @typenow/app build",
+    "build:production": "CLOUDFLARE_ENV=production pnpm build",
+    "build:staging": "CLOUDFLARE_ENV=staging pnpm build",
+    "preview": "pnpm --filter @typenow/app preview",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "cf:typegen": "pnpm --filter @typenow/app cf:typegen",
+    "deploy": "pnpm --filter @typenow/app deploy",
+    "deploy:dry-run": "pnpm --filter @typenow/app deploy:dry-run"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9"
+  }
+}

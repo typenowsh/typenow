@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "typenow-dev",
+  "main": "@tanstack/react-start/server-entry",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true, "head_sampling_rate": 0.1 },
+  "env": {
+    "production": {
+      "name": "typenow",
+      "workers_dev": false,
+      "preview_urls": false,
+      "routes": [{ "pattern": "typenow.sh", "custom_domain": true }],
+    },
+    "staging": { "name": "typenow-staging" },
+  },
+}

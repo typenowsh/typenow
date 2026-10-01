@@ -1,0 +1,13 @@
+{
+  "name": "@typenow/sdk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Server-side API client (planned)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typenowsh/typenow.git",
+    "directory": "packages/sdk"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules
+dist
+.wrangler
+.tanstack
+**/routeTree.gen.ts
+pnpm-lock.yaml
+worker-configuration.d.ts
+docs/product-strategy.md
+apps/web/public
+artifacts
+LICENSE
+**/LICENSE

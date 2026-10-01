@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.wrangler/
+.tanstack/
+.dev.vars*
+.env*
+!.env.example
+!.dev.vars.example
+.npmrc
+!.npmrc.example
+worker-configuration.d.ts
+artifacts/
+.DS_Store
+*.log
+*.pem
+*.key
