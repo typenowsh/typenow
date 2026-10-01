@@ -178,9 +178,83 @@ img {
   flex: 1;
   align-items: center;
 }
-.brand img {
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   width: 137px;
   height: 29px;
+  color: var(--color-ink);
+}
+.brand-symbol {
+  display: block;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+}
+.brand-wordmark {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+.brand-ribbon {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 240ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.brand-ribbon-2 {
+  transition-delay: 15ms;
+}
+.brand-ribbon-3 {
+  transition-delay: 30ms;
+}
+.brand-ribbon-4 {
+  transition-delay: 45ms;
+}
+.footer-brand .brand-lockup {
+  width: 132px;
+  height: 28px;
+}
+.footer-brand .brand-symbol {
+  width: 28px;
+  height: 28px;
+}
+.footer-brand .brand-wordmark {
+  width: 96px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .brand-lockup:hover .brand-ribbon-1 {
+    transform: translate(-1px, -2px) rotate(-3deg);
+  }
+  .brand-lockup:hover .brand-ribbon-2 {
+    transform: translate(2px, 0) rotate(3deg);
+  }
+  .brand-lockup:hover .brand-ribbon-3 {
+    transform: translate(-1px, 2px) rotate(-3deg);
+  }
+  .brand-lockup:hover .brand-ribbon-4 {
+    transform: translate(0, 2px);
+  }
+}
+.brand:active .brand-ribbon,
+.footer-brand:active .brand-ribbon {
+  transform: scale(0.96);
+  transition-delay: 0ms;
+}
+.brand:focus-visible .brand-ribbon,
+.footer-brand:focus-visible .brand-ribbon {
+  transform: none;
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-ribbon {
+    transition: none;
+  }
+  .brand-lockup:hover .brand-ribbon,
+  .brand:active .brand-ribbon,
+  .footer-brand:active .brand-ribbon {
+    transform: none;
+  }
 }
 .desktop-nav {
   display: flex;
@@ -2564,9 +2638,16 @@ footer {
   .header-inner {
     min-height: 76px;
   }
-  .brand img {
+  .brand .brand-lockup {
     width: 128px;
     height: 27px;
+  }
+  .brand .brand-symbol {
+    width: 27px;
+    height: 27px;
+  }
+  .brand .brand-wordmark {
+    width: 93px;
   }
   .desktop-nav,
   .header-actions {

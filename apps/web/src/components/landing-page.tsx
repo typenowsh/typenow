@@ -4,6 +4,7 @@ import { WorkflowPreview } from './workflow-preview'
 import { WebSdkPreview } from './web-sdk-preview'
 import { HeroPreview } from './hero-preview'
 import { InboxPreview } from './inbox-preview'
+import { BrandLogo } from './brand-logo'
 import {
   ArrowDownIcon,
   ArrowRightIcon,
@@ -123,7 +124,7 @@ export function LandingPage() {
       <header className="site-header">
         <div className="container header-inner">
           <a href="/" aria-label="Typenow homepage" className="brand">
-            <img src="/brand.svg" alt="Typenow" width="151" height="32" />
+            <BrandLogo />
           </a>
           <nav className="desktop-nav" aria-label="Main navigation">
             <a href="#product">Product</a>
@@ -504,8 +505,8 @@ export function LandingPage() {
 
       <footer>
         <div className="container footer-top">
-          <a href="/" aria-label="Typenow homepage">
-            <img src="/brand.svg" alt="Typenow" width="132" height="28" />
+          <a href="/" aria-label="Typenow homepage" className="footer-brand">
+            <BrandLogo />
           </a>
           <p>A little less inbox. A lot more building.</p>
           <div>
