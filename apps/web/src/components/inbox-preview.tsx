@@ -51,7 +51,7 @@ const conversations = [
     preview: 'That did the trick. Everything is working now.',
     time: '35m',
     message:
-      'That did the trick — everything is working now. Thanks for the quick reply, and for making the course so easy to follow!',
+      'That did the trick. Everything is working now. Thanks for the quick reply, and for making the course so easy to follow!',
     context: 'Course member',
     detail: 'Active access · Since September',
     reply:

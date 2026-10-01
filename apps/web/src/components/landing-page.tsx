@@ -830,7 +830,7 @@ function InviteDialog({
   const [draftOpened, setDraftOpened] = useState(false)
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const subject = encodeURIComponent(`Typenow early access — ${plan}`)
+    const subject = encodeURIComponent(`Typenow early access: ${plan}`)
     const body = encodeURIComponent(
       `Hi Karn,\n\nI'd like to try Typenow.\n\nName: ${name}\nEmail: ${email}\nInterested in: ${plan}\n\nHere's what I currently use for customer support:\n`,
     )
