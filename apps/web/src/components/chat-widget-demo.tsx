@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { ChatTopicSelect } from './chat-topic-select'
 import {
   ArrowRightIcon,
   ChatBubbleLeftRightIcon,
@@ -83,7 +84,7 @@ export function ChatWidgetDemo({
       role="region"
       aria-label="Example support chat"
       onKeyDown={(event) => {
-        if (event.key === 'Escape') {
+        if (event.key === 'Escape' && !event.defaultPrevented) {
           event.stopPropagation()
           onClose()
         }
@@ -252,19 +253,7 @@ export function ChatWidgetDemo({
               composer.current?.focus()
             }}
           >
-            <label className="chat-topic">
-              <span>About</span>
-              <select
-                aria-label="Question topic"
-                value={topic}
-                onChange={(event) => setTopic(event.target.value)}
-              >
-                <option>Course access</option>
-                <option>Billing</option>
-                <option>Technical issue</option>
-                <option>Something else</option>
-              </select>
-            </label>
+            <ChatTopicSelect value={topic} onValueChange={setTopic} />
             <label className="sr-only" htmlFor="sdk-message">
               Your message
             </label>
