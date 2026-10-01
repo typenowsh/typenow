@@ -41,7 +41,7 @@ export const Route = createRootRoute({
         type: 'font/woff2',
         crossOrigin: 'anonymous',
       },
-      { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+      { rel: 'icon', href: '/favicon.svg?v=2', type: 'image/svg+xml' },
       { rel: 'canonical', href: 'https://typenow.sh/' },
     ],
   }),
