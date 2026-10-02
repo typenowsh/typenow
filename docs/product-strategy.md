@@ -2,6 +2,8 @@
 
 Research date: 1 October 2026. Prepared for Karn, founder of Typenow and Karnstack.
 
+Implementation order, milestone acceptance criteria, and the website/GitHub setup additions are maintained in the [product build plan](build-plan.md). The research below remains the evidence and rationale for the product direction.
+
 This document recommends a product direction for typenow.sh, explains the evidence behind it, and defines what to validate before investing in a broad support platform. It combines the earlier research with another pass through direct competitors and current Cloudflare documentation. Prices are in USD unless stated otherwise.
 
 The recommendation is to build an open source customer inbox for small software businesses. Email, forms, and an embeddable web chat start conversations in the same inbox. Customer context helps the founder answer them. Customers can use Typenow through its interface or their own AI client. Cloudflare is the deployment target for both the managed service and the self-hosted edition.
@@ -212,7 +214,7 @@ Cloudflare's Agentic Inbox documents a mailbox access model that permits allowed
 
 The self-hosted core should contain the useful product: inbox, forms, API, MCP, integrations, basic permissions, and exports. Earn cloud revenue from managed deployment, backups, upgrades, and operation. A working free installation is part of the developer-distribution strategy.
 
-Choose an actual open source license before publication and document any separate hosting or trademark terms plainly. This research does not settle the license choice. Do not describe a source-available restriction as open source.
+The repository now uses AGPL-3.0-only for the application and MIT for the SDK workspaces, following the founder's license decision. Document any separate hosting or trademark terms plainly. Do not describe a source-available restriction as open source.
 
 | Plan | Proposed starting limits | Reason to choose it |
 | --- | --- | --- |
@@ -304,7 +306,7 @@ If forms retain users while the inbox does not, revisit the product direction us
 | Can managed customers connect sending domains without moving accounts? | Test native Cloudflare support or select an adapter with verified domain onboarding. |
 | How are uncertain sends reconciled? | Test timeout and provider-event behavior with both the binding and fallback adapter. |
 | What is the acceptable self-host installation burden? | Observe developers completing a clean deployment without founder intervention. |
-| Which license and contribution policy fit the business? | Decide before publishing the repository. |
+| Which contribution policy fits the business? | The app/SDK license split is decided. Document contribution and trademark expectations before inviting external contributions. |
 | What are the actual costs and acceptable plan limits? | Measure the pilot, including support time and AI jobs, then revise pricing. |
 
 The next concrete work is the email and identity proof, followed by a Karnstack inbox that handles both chosen workflows. Typenow should earn its place in real customer communication before claiming to be a new support platform.
