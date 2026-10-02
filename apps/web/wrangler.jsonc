@@ -5,13 +5,44 @@
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true, "head_sampling_rate": 0.1 },
+  "vars": {
+    "APP_ENV": "development",
+    "APP_URL": "http://127.0.0.1:3100",
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "typenow-dev",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "r2_buckets": [{ "binding": "FILES", "bucket_name": "typenow-dev-files" }],
   "env": {
     "production": {
       "name": "typenow",
       "workers_dev": false,
       "preview_urls": false,
       "routes": [{ "pattern": "typenow.sh", "custom_domain": true }],
+      "vars": { "APP_ENV": "production", "APP_URL": "https://typenow.sh" },
+      "d1_databases": [],
+      "r2_buckets": [],
     },
-    "staging": { "name": "typenow-staging" },
+    "staging": {
+      "name": "typenow-staging",
+      "workers_dev": false,
+      "preview_urls": false,
+      "routes": [{ "pattern": "staging.typenow.sh", "custom_domain": true }],
+      "vars": { "APP_ENV": "staging", "APP_URL": "https://staging.typenow.sh" },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "typenow-staging",
+          "migrations_dir": "migrations",
+        },
+      ],
+      "r2_buckets": [
+        { "binding": "FILES", "bucket_name": "typenow-staging-files" },
+      ],
+    },
   },
 }

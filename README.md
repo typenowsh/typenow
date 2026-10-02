@@ -12,6 +12,9 @@ Use Node 24 and pnpm 11.0.6, as declared in `.nvmrc` and `package.json`.
 
 ```sh
 pnpm install --frozen-lockfile
+pnpm cf:typegen
+pnpm db:migrate:local
+pnpm db:seed:local
 pnpm dev
 ```
 
@@ -20,12 +23,13 @@ Open http://127.0.0.1:3100. Local development needs no Cloudflare account or cre
 ```sh
 pnpm cf:typegen
 pnpm typecheck
+pnpm test
 pnpm format:check
 pnpm build
 pnpm preview
 ```
 
-The production preview runs at http://127.0.0.1:3101. Run `pnpm format` to format source files.
+The production preview runs at http://127.0.0.1:3101. Run `pnpm format` to format source files. See [local development](docs/local-development.md) for D1 migrations, synthetic workspaces, R2 storage, and Worker runtime tests. Staging resources are defined separately; remote provisioning and app authorization are not implemented yet.
 
 ## Workspace
 
@@ -43,7 +47,7 @@ The app uses React, TypeScript, Tailwind CSS, and the Cloudflare Vite plugin. On
 
 ## Deployment
 
-Pull requests run formatting, generated Worker types, TypeScript, a production build, and a Wrangler dry run. Successful `main` pushes deploy the Worker to **https://typenow.sh** through the GitHub `production` environment. Forks cannot deploy upstream, and pull requests receive no deployment secrets. Action versions are pinned to commit SHAs and updated by Dependabot.
+Pull requests run formatting, generated Worker types, TypeScript, Worker runtime tests, local migration/fixture replay, and staging and production builds with Wrangler dry runs. Each roadmap step waits for Karn's explicit instruction before merging. Successful `main` pushes deploy the Worker to **https://typenow.sh** through the GitHub `production` environment. Forks cannot deploy upstream, and pull requests receive no deployment secrets. Action versions are pinned to commit SHAs and updated by Dependabot.
 
 The production environment contains:
 

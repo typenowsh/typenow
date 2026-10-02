@@ -293,7 +293,9 @@ The self-hosted software does not depend on hosted billing. The cloud edition ca
 
 ## How to build each milestone
 
-Use small pull requests that finish a user-visible behavior or a necessary foundation. Each PR states its trigger, resulting behavior, data changes, and relevant verification. Separate unrelated library upgrades and visual experiments from a delivery or permission change.
+Use small pull requests that finish a user-visible behavior or a necessary foundation. Implement one numbered step per PR. Each PR states its trigger, resulting behavior, data changes, relevant verification, and limitations. Write meaningful backend tests first where practical, observe the expected failures, and implement until they pass. Separate unrelated library upgrades and visual experiments from a delivery or permission change.
+
+Wait for Karn's explicit instruction before merging each PR or starting the next step. Do not enable auto-merge. Passing CI makes a PR ready for review; it does not grant permission to merge.
 
 For each milestone, record the working demonstration, remaining limitations, measured usage, and decision notes here. Mark it complete only after its exit condition works in the deployed environment. Do not turn the roadmap into a list of implemented claims prematurely.
 

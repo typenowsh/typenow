@@ -19,7 +19,10 @@
     "cf:typegen": "pnpm --filter @typenow/app cf:typegen",
     "deploy": "pnpm --filter @typenow/app deploy",
     "deploy:dry-run": "pnpm --filter @typenow/app deploy:dry-run",
-    "brand:svg": "node scripts/export-brand.mjs"
+    "brand:svg": "node scripts/export-brand.mjs",
+    "test": "pnpm --filter @typenow/app test",
+    "db:migrate:local": "pnpm --filter @typenow/app db:migrate:local",
+    "db:seed:local": "pnpm --filter @typenow/app db:seed:local"
   },
   "devDependencies": {
     "prettier": "^3.9.9"
