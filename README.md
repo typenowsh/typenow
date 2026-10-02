@@ -1,6 +1,6 @@
 # Typenow
 
-[typenow.sh](https://typenow.sh) · [Product strategy](docs/product-strategy.md) · [SDK plan](docs/web-sdk.md)
+[typenow.sh](https://typenow.sh) · [Build plan](docs/build-plan.md) · [Product strategy](docs/product-strategy.md) · [SDK plan](docs/web-sdk.md)
 
 An open source customer inbox for small software teams. The direction is email, forms, and embedded chat in one inbox, with customer context and optional AI assistance.
 
